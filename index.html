@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIT Turkish Students Association</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h1>MIT Turkish Students Association</h1>
+
+    <p class="text-container">Turkish Student Association (TSA) is an ASA recognized MIT cultural group. The group
+      strives to introduce Turkish
+      culture to the MIT community by organizing fun cultural and social events. Everyone with an interest in the
+      Turkish
+      culture is welcome to join the group.</p>
+
+    <section id="events" class="text-container">
+      <h2>Events</h2>
+      <ul id="events-list">
+        <template id="event-template">
+          <li class="event">
+            <article>
+              <header class="event-name"></header>
+              <p class="event-description"></p>
+              <div class="single-line-center">
+                <img class="icon" src="./media/time-icon.svg" />
+                <span class="event-time"></span>
+              </div>
+              <div class="single-line-center">
+                <img class="icon" src="./media/location-icon.svg" />
+                <span class="event-location"></span>
+              </div>
+            </article>
+          </li>
+        </template>
+      </ul>
+    </section>
+
+    <section id="exec" class="text-container">
+      <h2>Executive Committee</h2>
+      <ul id="exec-list">
+        <template id="exec-template">
+          <li class="exec-name"></li>
+        </template>
+      </ul>
+    </section>
+
+    <section class="text-container">
+      <h2>Contact Us</h2>
+      <p>Write us at <a href="mailto:tsa-exec@mit.edu">tsa-exec@mit.edu</a></p>
+      <a class="social" href="https://www.instagram.com/mit.tsa/" target="_blank">
+        <img src="./media/ig-logo.png" />
+        <span>@mit.tsa on instagram</span>
+      </a>
+      </article>
+    </section>
+
+    <section class="text-container">
+      <h2>Join Our Mailing List</h2>
+      <p>We post reminders for our events and useful information for our community. We review the requests.</p>
+      <form id="mailing">
+        <fieldset>
+          <legend>Send us a request</legend>
+          <div class="form-item">
+            <label for="mailing_email">Email:</label>
+            <input type="email" name="mailing_email" id="mailing_email" placeholder="Your e-mail address" />
+          </div>
+          <div class="form-item">
+            <label for="mailing_message">Message:</label>
+            <textarea name="mailing_message" id="mailing_message"
+              placeholder="Any information about you would be useful!"></textarea>
+          </div>
+          <input type="submit" value="Request" />
+        </fieldset>
+      </form>
+    </section>
+
+    <img id="tsa-logo" src="./media/tsalogo.png" />
+  </main>
+
+  <footer>
+    <img src="./media/tsalogo.png" />
+    <div class="brand">
+      <a href="https://mit.edu" target="_blank" rel="noopener noreferrer">
+        <img src="./media/mitlogo.png" />
+      </a>
+      <div class="meta">
+        <p>Massachusetts Institute of Technology</p>
+        <p>Cambridge, MA 02139</p>
+      </div>
+    </div>
+    <a href="https://accessibility.mit.edu/" target="_blank" rel="noopener noreferrer">Accessibility</a>
+  </footer>
+
+  <script src="./index.js" type="module"></script>
+</body>
+</html>
