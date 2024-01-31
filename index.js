@@ -25,13 +25,24 @@ exec.forEach((exec) => {
   execList.appendChild(execNode);
 });
 
-$("#mailing").addEventListener("submit", (e) => {
+$("#mailing").addEventListener("submit", async (e) => {
   e.preventDefault();
   const form = e.target;
   const data = new FormData(form);
   const email = data.get("mailing_email");
   const message = "\n" + data.get("mailing_message");
-  fetch(`/mailinglist.php?address=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`, {
+  const response = await fetch(`/mailinglist.php?address=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`, {
     method: 'GET',
   });
+
+  if (response.ok) {
+    const text = await response.text();
+    if (text === "1") {
+      alert("Your request has been sent!");
+      form.reset();
+      return;
+    }
+  }
+
+  alert("There was an error sending your request.");
 });
