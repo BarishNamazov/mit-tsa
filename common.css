@@ -29,6 +29,7 @@ nav ul {
   gap: 0.5em;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 nav li {
   list-style: none;
