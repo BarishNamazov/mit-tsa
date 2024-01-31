@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIT Turkish Students Association</title>
+
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+  <header id="site-header">
+    <nav>
+      <ul>
+        <li><a href="/#events">Events</a></li>
+        <li><a href="/#exec">Executive Committee</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Gallery</h1>
+
+    <section id="gallery">
+      <ul id="gallery-list">
+        <!-- create li that will be populated using image, date and description -->
+        <template id="gallery-template">
+          <li class="gallery-item">
+            <article>
+              <img class="gallery-image" src="" alt="" loading="lazy">
+              <div class="gallery-description">
+                <p class="gallery-text"></p>
+                <span>Date: <span class="gallery-date"></span></span>
+              </div>
+            </article>
+          </li>
+        </template>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="brand">
+      <a href="https://mit.edu" target="_blank" rel="noopener noreferrer">
+        <img src="./media/mitlogo.png" />
+      </a>
+      <div class="meta">
+        <p>Massachusetts Institute of Technology</p>
+        <p>Cambridge, MA 02139</p>
+      </div>
+    </div>
+    <a href="https://accessibility.mit.edu/" target="_blank" rel="noopener noreferrer">Accessibility</a>
+  </footer>
+
+  <script src="gallery.js" type="module"></script>
+</body>
+
+</html>
